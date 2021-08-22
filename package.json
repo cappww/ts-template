@@ -5,8 +5,11 @@
   "main": "./build/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./build/main.js"
+    "start": "node -r dotenv/config ./build/main.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  }
 }
