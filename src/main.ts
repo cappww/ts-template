@@ -1,4 +1,4 @@
-import { env } from "./config";
+import { env, connectToMongo } from "./config";
 
 async function main() {}
 

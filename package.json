@@ -5,12 +5,13 @@
   "main": "./build/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node -r dotenv/config ./build/main.js"
+    "start": "tsc && node -r dotenv/config ./build/main.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "mongodb": "^4.1.2"
   },
   "devDependencies": {
     "@types/node": "^16.7.1"
