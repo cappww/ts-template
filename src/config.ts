@@ -8,7 +8,7 @@ export function handleError(error: any | unknown) {
 
 const DB_URI = process.env["DB_URI"];
 let mongo: Promise<MongoClient> | null = null;
-export async function connectToMongo() {
+export function connectToMongo() {
   if (!DB_URI) throw new Error("There is no db uri");
   if (!mongo) mongo = MongoClient.connect(DB_URI);
   return mongo;
