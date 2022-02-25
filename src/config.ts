@@ -7,11 +7,11 @@ export function handleError(error: any | unknown) {
 }
 
 const DB_URI = process.env["DB_URI"];
-let mongo: Promise<MongoClient> | null = null;
+let mongoClient: MongoClient | null = null;
 export function connectToMongo() {
   if (!DB_URI) throw new Error("There is no db uri");
-  if (!mongo) mongo = MongoClient.connect(DB_URI);
-  return mongo;
+  if (!mongoClient) mongoClient = new MongoClient(DB_URI);
+  return mongo.connect();
 }
 
 export const env = {};
