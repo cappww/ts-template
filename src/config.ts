@@ -11,7 +11,7 @@ let mongoClient: MongoClient | null = null;
 export function connectToMongo() {
   if (!DB_URI) throw new Error("There is no db uri");
   if (!mongoClient) mongoClient = new MongoClient(DB_URI);
-  return mongo.connect();
+  return mongoClient.connect();
 }
 
 export const env = {};
